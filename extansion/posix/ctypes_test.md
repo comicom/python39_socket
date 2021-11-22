@@ -7,7 +7,7 @@ ctypes is a python built-in library that invokes exported functions from native 
 ### Failing to load a file
 
 ''' python
->>> cdll.LoadLibrary("foobar.so")
+cdll.LoadLibrary("foobar.so")
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 File "/usr/lib/python3.5/ctypes/__init__.py", line 425, in LoadLibrary
