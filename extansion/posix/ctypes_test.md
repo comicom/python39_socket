@@ -45,6 +45,10 @@ File "/usr/lib/python3.5/ctypes/__init__.py", line 365, in __getitem__
     func = self._FuncPtr((name_or_ordinal, self))
 AttributeError: /lib/i386-linux-gnu/libc.so.6: undefined symbol: foo
 ```
-
+In this case,
+ * non-existing function is used.
+ * should compile with g++ instead of gcc.(gcc does not link the binary with c++ libraries.)
+ * should use C++ name mangling. (extern "C")
+ * set library path like CMakeLists.txt using python env-path *LD_LIBRARY_PATH*
 
 ref. https://sodocumentation.net/python/topic/9050/ctypes
