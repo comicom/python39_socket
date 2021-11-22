@@ -6,8 +6,8 @@ ctypes is a python built-in library that invokes exported functions from native 
 
 ### Failing to load a file
 
-''' python
-cdll.LoadLibrary("foobar.so")
+``` python
+>>> cdll.LoadLibrary("foobar.so")
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 File "/usr/lib/python3.5/ctypes/__init__.py", line 425, in LoadLibrary
@@ -15,7 +15,7 @@ File "/usr/lib/python3.5/ctypes/__init__.py", line 425, in LoadLibrary
 File "/usr/lib/python3.5/ctypes/__init__.py", line 347, in __init__
     self._handle = _dlopen(self._name, mode)
 OSError: foobar.so: cannot open shared object file: No such file or directory
-'''
+```
 
 
 
